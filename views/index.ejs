@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%=title%></title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <!-- endinject -->
+    <style>
+
+        .jumbotron a {
+            border-radius: 0;
+            border: 2px solid #4821ff;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            }
+        .jumbotron a:hover {background-color: #004444; color: #fff;}
+
+        .features img {width: 40%; margin-top: 1rem;}
+        .features .card {}
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <% for (var i = 0; i < nav.length; i++){ %>
+                <li class="nav-item"><a class="nav-link" href="<%= nav[i].Link %>"><%= nav[i].Text %></a></li>
+                <% } %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- Image Background Page Header -->
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <h1 class="display-4"><%=title%></h1>
+        <p class="lead">All of your entertainment in one place!</p>
+        <a href="#features" class="btn btn-lg btn-primary mt-2" role="button">Explore</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row mb-2">
+        <div class="col">
+            <h2 class="mt-4">What We Do</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+
+
+    <!-- /.row -->
+    <div class="row features" id="features">
+       <div class="card-deck">
+            <div class="card">
+                <a href="/book"><img class="rounded-circle mx-auto d-block" src="/img/index/book.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">Book collection</h4>
+                    <p class="card-text">A small but quality library, which is carefully collected by our team. You can pick your favourite books.js by filtering the genres, the authors, or the rating. </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="/music"><img class="rounded-circle mx-auto d-block" src="/img/index/music.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">Music collection</h4>
+                    <p class="card-text">The music of your choice! You can pick up songs within our pre-built music library or you can add new music from some of the huge libraries out there such as zingmp3, nhaccuatui</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="/movie"><img class="rounded-circle mx-auto d-block" src="/img/index/movie.png" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">Movie collection</h4>
+                    <p class="card-text">The movies of your choice! You can pick up music within our pre-built movies library or you can add new movies from some of the huge libraries out there such as phimmoi, hdonline</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+
+<!-- inject:js -->
+<script src="/libs/jquery/jquery.js"></script>
+<script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- endinject -->
+</body>
+
+</html>

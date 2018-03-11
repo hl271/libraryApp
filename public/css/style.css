@@ -1,0 +1,12 @@
+body {
+		padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+		}
+.jumbotron {
+		background: url('/img/index/header-1.jpg') center center no-repeat scroll;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		}
+
+footer {margin-top: 3rem}

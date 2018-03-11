@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All books</title>
+    <!-- bower:css --
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- bower:js --
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <!-- endinject -->
+
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <% for (var i = 0; i < nav.length; i++){ %>
+                <li class="nav-item"><a class="nav-link" href="<%= nav[i].Link %>"><%= nav[i].Text %></a></li>
+                <% } %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">All books available
+                <small>Secondary Text</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Function to trim description to a certain number of words -->
+    <%var readMore = function (string, maxWord) {
+        var splitString = string.split(" ")
+        return splitString.length > maxWord ? splitString.splice(0, maxWord).join(" ")+"..." : string;
+    }%>
+    <!-- Projects Row -->
+    <div class="row">
+        <% for (var i = 0; i < books.length; i++){ %>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card">
+                <a href="/book/<%= books[i]._id %>"><img class="mx-auto d-block" style="height: 10rem; width: auto;" src="<%= books[i].imgLink %>" alt="<%= books[i].title %>"></a>
+                <div class="card-body">
+                    <h5 class="card-title"><%= books[i].title %></h5>
+                    <p class="card-text"><%= readMore(books[i].description, 20) %></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Author: <%=books[i].author%></li>
+                    <li class="list-group-item">Rating: </li>
+                    <li class="list-group-item">Category: <%=books[i].category%></li>
+                </ul>
+                <div class="card-footer">
+                    <a href="/book/<%= books[i]._id %>" class="btn btn-primary">Read more</a>
+                    <a href="#" class="btn btn-danger">Bookmark</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+    <!-- /.row -->
+    <hr>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<!-- inject:js -->
+<script src="/libs/jquery/jquery.js"></script>
+<script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- endinject -->
+</body>
+
+</html>

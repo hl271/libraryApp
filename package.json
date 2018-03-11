@@ -1,0 +1,40 @@
+{
+  "title": "My Library",
+  "name": "LibraryApp",
+  "version": "1.0.0",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "index.html",
+  "license": "Unlincese",
+  "author": "Lan",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.9",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.3.0",
+    "gulp-nodemon": "^2.2.1",
+    "wiredep": "^4.0.0",
+    "xml2js": "^0.4.19"
+  }
+}

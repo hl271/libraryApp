@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>View books - <%=book.title%></title>
+    <!-- bower:css --
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+		
+    <!-- bower:js --
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <!-- endinject -->
+
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <% for (var i = 0; i < nav.length; i++){ %>
+                <li class="nav-item"><a class="nav-link" href="<%= nav[i].Link %>"><%= nav[i].Text %></a></li>
+                <% } %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading -->
+      <h1 class="my-4"><%=book.title%>
+        <small>Secondary Text</small>
+      </h1>
+
+    <!-- Projects Row -->
+    <div class="row">
+
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="<%= book.imgLink %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-8 col-sm-12 portfolio-item">
+            <h3>Author: <%= book.author %></h3>
+            <p><strong>Description: </strong><%= book.description %></p>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<!-- inject:js -->
+<script src="/libs/jquery/jquery.js"></script>
+<script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- endinject -->
+</body>
+
+</html>
